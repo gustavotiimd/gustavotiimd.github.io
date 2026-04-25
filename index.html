@@ -1,11 +1,17 @@
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
-<script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script>
-<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMD App - Nova Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
+            background-color: #f3f4f6; /* gray-100 */
         }
         
         :root {
@@ -32,79 +38,198 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-</style>
-<!-- Topo / Header Moderno -->
-<div class="bg-white px-6 pt-12 pb-6 shadow-sm rounded-b-3xl z-10 relative">
-<div class="flex justify-between items-center">
-<div class="flex items-center gap-2"><i class="w-8 h-8 text-imd" data-lucide="fingerprint" style="stroke-width: 2;"></i> <span class="text-2xl font-bold tracking-tight text-gray-800">IMD</span></div>
-<!-- Avatar / Perfil Placeholder --><button class="w-10 h-10 rounded-full bg-imd-light border border-blue-100 flex items-center justify-center text-imd font-semibold btn-press">JD</button></div>
+    </style>
+</head>
+<body class="flex justify-center min-h-screen">
 
-<div class="mt-6">
-<h2 class="text-2xl font-semibold text-gray-800 tracking-tight">Ol&aacute;, Jo&atilde;o!</h2>
+    <!-- Simulador de ecrã de telemóvel -->
+    <div class="w-full max-w-[400px] bg-[#F8FAFC] shadow-2xl overflow-hidden flex flex-col relative min-h-screen sm:min-h-[850px] sm:my-8 sm:rounded-[40px] sm:border-[10px] sm:border-gray-900">
+        
+        <!-- Topo / Header Moderno -->
+        <div class="bg-white px-6 pt-12 pb-6 shadow-sm rounded-b-3xl z-10 relative">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="fingerprint" class="w-8 h-8 text-imd" style="stroke-width: 2;"></i>
+                    <span class="text-2xl font-bold tracking-tight text-gray-800">IMD</span>
+                </div>
+                <!-- Avatar / Perfil Placeholder -->
+                <button class="w-10 h-10 rounded-full bg-imd-light border border-blue-100 flex items-center justify-center text-imd font-semibold btn-press">
+                    JD
+                </button>
+            </div>
+            <div class="mt-6">
+                <h2 class="text-2xl font-semibold text-gray-800 tracking-tight">Olá, João!</h2>
+                <p class="text-gray-500 text-sm mt-1">O que procura para hoje?</p>
+            </div>
+        </div>
 
-<p class="text-gray-500 text-sm mt-1">O que procura para hoje?</p>
-</div>
-</div>
-<!-- Área de Conteúdo -->
+        <!-- Área de Conteúdo -->
+        <div class="flex-1 overflow-y-auto px-6 pt-6 pb-28 no-scrollbar">
+            
+            <!-- Acesso Rápido (Destaques) -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <!-- Primário: Agendar -->
+                <button class="bg-imd text-white rounded-3xl p-5 flex flex-col items-start shadow-lg shadow-blue-900/20 relative overflow-hidden btn-press h-[130px] justify-between group">
+                    <div class="bg-white/20 p-2.5 rounded-2xl backdrop-blur-sm z-10">
+                        <i data-lucide="calendar-clock" class="w-6 h-6 text-white" style="stroke-width: 2;"></i>
+                    </div>
+                    <span class="font-semibold text-left text-sm z-10 leading-tight">Agendar<br>Exame</span>
+                    <!-- Elemento decorativo de fundo -->
+                    <i data-lucide="fingerprint" class="absolute -right-4 -bottom-4 w-24 h-24 text-white opacity-10 transform -rotate-12 transition-transform group-hover:scale-110 duration-500"></i>
+                </button>
 
-<div class="px-6 pt-6 pb-28 no-scrollbar"><!-- Acesso Rápido (Destaques) -->
-<div class="grid grid-cols-2 gap-4 mb-8"><!-- Primário: Agendar --><button class="bg-imd text-white rounded-3xl p-5 flex flex-col items-start shadow-lg shadow-blue-900/20 relative overflow-hidden btn-press h-[130px] justify-between group"></button>
+                <!-- Secundário: Resultados -->
+                <button class="bg-white text-gray-800 rounded-3xl p-5 flex flex-col items-start shadow-sm border border-gray-100 btn-press h-[130px] justify-between hover:border-blue-200 transition-colors">
+                    <div class="bg-imd-light p-2.5 rounded-2xl text-imd">
+                        <i data-lucide="file-check-2" class="w-6 h-6" style="stroke-width: 2;"></i>
+                    </div>
+                    <span class="font-semibold text-left text-sm leading-tight">Ver<br>Resultados</span>
+                </button>
+            </div>
+            
+            <h3 class="text-gray-800 font-semibold mb-5 text-[15px]">Explorar Serviços</h3>
 
-<div class="bg-white/20 p-2.5 rounded-2xl backdrop-blur-sm z-10"><button class="bg-imd text-white rounded-3xl p-5 flex flex-col items-start shadow-lg shadow-blue-900/20 relative overflow-hidden btn-press h-[130px] justify-between group"><i class="w-6 h-6 text-white" data-lucide="calendar-clock" style="stroke-width: 2;"></i></button></div>
-<span class="font-semibold text-left text-sm z-10 leading-tight">Agendar<br />
-Exame</span> <!-- Elemento decorativo de fundo --> <i class="absolute -right-4 -bottom-4 w-24 h-24 text-white opacity-10 transform -rotate-12 transition-transform group-hover:scale-110 duration-500" data-lucide="fingerprint"></i> <!-- Secundário: Resultados --><button class="bg-white text-gray-800 rounded-3xl p-5 flex flex-col items-start shadow-sm border border-gray-100 btn-press h-[130px] justify-between hover:border-blue-200 transition-colors"></button>
+            <!-- Grelha de Ícones Modernos -->
+            <div class="grid grid-cols-3 gap-y-7 gap-x-3">
+                
+                <!-- 1. Sobre Nós -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="info" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Sobre<br>Nós</span>
+                </button>
 
-<div class="bg-imd-light p-2.5 rounded-2xl text-imd"><button class="bg-white text-gray-800 rounded-3xl p-5 flex flex-col items-start shadow-sm border border-gray-100 btn-press h-[130px] justify-between hover:border-blue-200 transition-colors"><i class="w-6 h-6" data-lucide="file-check-2" style="stroke-width: 2;"></i></button></div>
-<span class="font-semibold text-left text-sm leading-tight">Ver<br />
-Resultados</span></div>
+                <!-- 2. Corpo Clínico -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="stethoscope" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Corpo<br>Clínico</span>
+                </button>
 
-<h3 class="text-gray-800 font-semibold mb-5 text-[15px]">Explorar Servi&ccedil;os</h3>
-<!-- Grelha de Ícones Modernos -->
+                <!-- 3. Serviços (Ícone de Ressonância Magnética) -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 group-hover:scale-105 transition-transform">
+                            <path d="M20 16V9a8 8 0 0 0-16 0v7" />
+                            <path d="M16 16v-2a4 4 0 0 0-8 0v2" />
+                            <rect x="5" y="16" width="14" height="2.5" rx="1" />
+                            <path d="M10 18.5v3" />
+                            <path d="M14 18.5v3" />
+                            <path d="M8 21.5h8" />
+                            <circle cx="12" cy="5" r="0.5" fill="currentColor" stroke="none" />
+                        </svg>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Serviços</span>
+                </button>
 
-<div class="grid grid-cols-3 gap-y-7 gap-x-3"><!-- 1. Sobre Nós --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 4. Localização -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="map-pin" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Localização</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="info" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Sobre<br />
-N&oacute;s</span> <!-- 2. Corpo Clínico --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 5. Convênios -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="handshake" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Convênios</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="stethoscope" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Corpo<br />
-Cl&iacute;nico</span> <!-- 3. Serviços (Ícone de Ressonância Magnética) --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 6. Dúvidas -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="message-circle-question" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Dúvidas</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><svg class="w-6 h-6 group-hover:scale-105 transition-transform" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M20 16V9a8 8 0 0 0-16 0v7"></path> <path d="M16 16v-2a4 4 0 0 0-8 0v2"></path> <rect height="2.5" rx="1" width="14" x="5" y="16"></rect> <path d="M10 18.5v3"></path> <path d="M14 18.5v3"></path> <path d="M8 21.5h8"></path> <circle cx="12" cy="5" fill="currentColor" r="0.5" stroke="none"></circle> </svg></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Servi&ccedil;os</span> <!-- 4. Localização --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 7. Rádio IMD -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="radio" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Rádio IMD</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="map-pin" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Localiza&ccedil;&atilde;o</span> <!-- 5. Convênios --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 8. Vídeos -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="play-square" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Vídeos</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="handshake" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Conv&ecirc;nios</span> <!-- 6. Dúvidas --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 9. Site -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="globe" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Site</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="message-circle-question" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">D&uacute;vidas</span> <!-- 7. Rádio IMD --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 10. Pesquisa -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="smile-plus" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Pesquisa</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="radio" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">R&aacute;dio IMD</span> <!-- 8. Vídeos --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 11. Fale Conosco -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <i data-lucide="headset" class="w-6 h-6" style="stroke-width: 1.75;"></i>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Fale<br>Conosco</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="play-square" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">V&iacute;deos</span> <!-- 9. Site --><button class="flex flex-col items-center group btn-press"></button>
+                <!-- 12. Instagram (SVG Customizado) -->
+                <button class="flex flex-col items-center group btn-press">
+                    <div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Instagram</span>
+                </button>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="globe" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Site</span> <!-- 10. Pesquisa --><button class="flex flex-col items-center group btn-press"></button>
+            </div>
+        </div>
+        
+        <!-- Menu Inferior (Bottom Navigation) -->
+        <div class="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 px-6 py-4 flex justify-between items-center z-20 pb-8 sm:pb-4 rounded-b-[32px] sm:rounded-b-[28px]">
+            <button class="flex flex-col items-center text-imd btn-press">
+                <i data-lucide="home" class="w-6 h-6 mb-1" style="stroke-width: 2.5;"></i>
+                <span class="text-[10px] font-semibold">Início</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press">
+                <i data-lucide="calendar" class="w-6 h-6 mb-1"></i>
+                <span class="text-[10px] font-medium">Agenda</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press relative">
+                <i data-lucide="bell" class="w-6 h-6 mb-1"></i>
+                <!-- Badge de Notificação -->
+                <span class="absolute top-0 right-1 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
+                <span class="text-[10px] font-medium">Avisos</span>
+            </button>
+            <button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press">
+                <i data-lucide="user" class="w-6 h-6 mb-1"></i>
+                <span class="text-[10px] font-medium">Perfil</span>
+            </button>
+        </div>
+        
+    </div>
 
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="smile-plus" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Pesquisa</span> <!-- 11. Fale Conosco --><button class="flex flex-col items-center group btn-press"></button>
-
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><i class="w-6 h-6" data-lucide="headset" style="stroke-width: 1.75;"></i></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Fale<br />
-Conosco</span> <!-- 12. Instagram (SVG Customizado) --><button class="flex flex-col items-center group btn-press"></button>
-
-<div class="w-[64px] h-[64px] bg-white rounded-2xl flex items-center justify-center shadow-sm border border-gray-100 mb-2.5 text-gray-500 group-hover:text-imd group-hover:border-blue-200 group-hover:shadow-md transition-all"><button class="flex flex-col items-center group btn-press"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path> <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line> </svg></button></div>
-<span class="text-[11px] font-medium text-gray-600 text-center leading-tight group-hover:text-gray-900 transition-colors">Instagram</span></div>
-</div>
-<!-- Menu Inferior (Bottom Navigation) -->
-
-<div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 px-6 py-4 flex justify-between items-center z-20"><button class="flex flex-col items-center text-imd btn-press"><i class="w-6 h-6 mb-1" data-lucide="home" style="stroke-width: 2.5;"></i> <span class="text-[10px] font-semibold">In&iacute;cio</span></button><button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press"><i class="w-6 h-6 mb-1" data-lucide="calendar"></i> <span class="text-[10px] font-medium">Agenda</span></button><button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press relative"><i class="w-6 h-6 mb-1" data-lucide="bell"></i> <!-- Badge de Notificação --> <span class="absolute top-0 right-1 w-2 h-2 bg-red-500 rounded-full border border-white"></span> <span class="text-[10px] font-medium">Avisos</span></button><button class="flex flex-col items-center text-gray-400 hover:text-gray-800 transition-colors btn-press"><i class="w-6 h-6 mb-1" data-lucide="user"></i> <span class="text-[10px] font-medium">Perfil</span></button></div>
-<!-- Inicializar os ícones --><script>
+    <!-- Inicializar os ícones -->
+    <script>
         lucide.createIcons();
     </script>
+</body>
+</html>
